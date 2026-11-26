@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Bootstrap 5 - SESI/SENAI Campo Largo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="bg-light d-flex flex-column min-vh-100">
 
@@ -48,47 +49,71 @@
     <body class="bg-light">
     
         <!-- Container centralizado com margem superior (mt-5) -->
-         <div class="container mt-5">
+         <div class="container-fluid p-0">
     
-             <div class="card mx-auto shadow-sm"style="max-width: 400px;">
-    
-                <div class="card-bost text-center p-4">
-    
-                    <img src="ramiro.jpg" alt="Foto de Perfil" style="max-width: 120px; max-height: 120px;" class="rounded-circle mb-3 border border-3 border-warning">
-    
-                    <h3 class="card-title fw-bold">
-    
-                        Ramiro Torres
-    
-                    </h3>
-    
-                    <p class="text-muted mb-3">
-    
-                        Personal trainer com 25 anos de experiência
-    
-                    </p>
-    
-                    <p class="card-text">
-    
-                        Formado em Educação física e com grande expêriencia em projetos de treino, treinos personalisados exclusivamente para você
-    
-                    </p>
-    
-                    <div class="d-grip gap-2">
-    
-                        <a href="#" class="btn btn-outline-danger">Alunos</a>
-                        
-                        <a href="#" class="btn btn-outline-success">Whatsapp</a>
+          <div class="position-relative text-center text-white" style="background-image: url(torneio.jpg); background-size: cover; background-position: center; padding-top: 180px; padding-bottom: 180px;">
 
-                        <a href="#" class="btn btn-outline-info">Instagram</a>
-    
-                    </div>
-    
-                </div>
-    
+            <!-- Escurece a imagem pra o texto ler melhor -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+          
+            <div class="position-relative">
+              <h1 class="display-3 fw-bold">Rota das Lendas</h1>
+              <h3 class="display-5 fw-bold">O Maior Torneio de Fortnite da História</h3>
+              <p class="fs-5">Aqui as suas habilidades serão testadas ao limete! Só os mais fortes vão ganhar o prêmio!</p>
+              <button class="btn btn-success btn-lg px-5 py-3">
+                <i class="bi bi-send"></i> Entre Já!
+              </button>
             </div>
-    
+          
+          </div>
+
+          <div class="container my-5">
+            <div class="row g-4">
+          
+              <div class="col-12 col-md-4">
+                <div class="card h-100 border border-3 border-warning">
+                  <div class="ratio ratio-1x1">
+                    <img src="trofeu.webp" alt="Premiação" class="card-img-top object-fit-cover">
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><i class="bi bi-gift text-danger"></i> Premiação</h5>
+                    <p class="card-text">O Trio que conseguir se classificar em 1º Lugar receberá uma premiação de <strong>R$ 3500,00</strong> por jogador!</p>
+                    <p class="card-text">O 2º Lugar receberá a premiação de <strong>R$ 1000,00</strong> por jogador!</p>
+                    <p class="card-text">O 3º Lugar receberá a premiação de <strong>R$ 500,00</strong> por jogador!</p>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="col-12 col-md-4">
+                <div class="card h-100 border border-3 border-warning">
+                  <div class="ratio ratio-1x1">
+                    <img src="trio.png" alt="Trio" class="card-img-top object-fit-cover">
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><i class="bi bi-people text-danger"></i> Equipes</h5>
+                    <p class="card-text">Cada equipe deve ser formada por um trio (3 jogadores). Os trios podem ser montados da maneiras que preferir, não há nenhuma regra em relação a idade, porém todos devem manter o respeito dentro e fora do próprio trio!</p>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="col-12 col-md-4">
+                <div class="card h-100 border border-3 border-warning">
+                  <div class="ratio ratio-1x1">
+                    <img src="multiplayer.png" alt="Multiplayer" class="card-img-top object-fit-cover">
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><i class="bi bi-pc-display text-danger"></i> Crossplay Multiplataforma</h5>
+                    <p class="card-text">O campeonato tem o sistema de Crossplay Multiplataforma, isso quer dizer que jogadores de diferentes plataformas podem jogar juntos, como por exemplo, um jogador de console (Xbox, Playstation, etc) pode participar do mesmo trio com um jogador de PC sem problemas.</p>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+
          </div>
+
+         
 
   </main>
 
