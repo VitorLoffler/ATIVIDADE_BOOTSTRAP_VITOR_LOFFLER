@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Bootstrap 5 - SESI/SENAI Campo Largo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="bg-light d-flex flex-column min-vh-100">
 
@@ -43,51 +44,231 @@
 
   <header></header>
 
-  <main>
+  <main class="flex-fill">
 
     <body class="bg-light">
     
         <!-- Container centralizado com margem superior (mt-5) -->
-         <div class="container mt-5">
+         <div class="container fluid p-0">
     
-             <div class="card mx-auto shadow-sm"style="max-width: 400px;">
-    
-                <div class="card-bost text-center p-4">
-    
-                    <img src="ramiro.jpg" alt="Foto de Perfil" style="max-width: 120px; max-height: 120px;" class="rounded-circle mb-3 border border-3 border-warning">
-    
-                    <h3 class="card-title fw-bold">
-    
-                        Ramiro Torres
-    
-                    </h3>
-    
-                    <p class="text-muted mb-3">
-    
-                        Personal trainer com 25 anos de experiência
-    
-                    </p>
-    
-                    <p class="card-text">
-    
-                        Formado em Educação física e com grande expêriencia em projetos de treino, treinos personalisados exclusivamente para você
-    
-                    </p>
-    
-                    <div class="d-grip gap-2">
-    
-                        <a href="#" class="btn btn-outline-danger">Alunos</a>
-                        
-                        <a href="#" class="btn btn-outline-success">Whatsapp</a>
+          <main class="flex-fill">
 
-                        <a href="#" class="btn btn-outline-info">Instagram</a>
-    
-                    </div>
-    
-                </div>
-    
+            <!-- HERO - FORA DE QUALQUER CONTAINER, DIRETO DENTRO DO MAIN -->
+    <div class="container-fluid p-0 m-0">
+      <div class="position-relative text-center text-white border-bottom border-5 border-success w-100 m-0" style="background-color: #1a1a2e; padding-top: 180px; padding-bottom: 180px;">
+        <div class="position-relative px-3">
+          <h1 class="display-3 fw-bold"><i class="bi bi-truck"></i> Painel de Controle Operacional</h1>
+          <p class="fs-5">Acompanhe as entregas em tempo real, controle os status e cadastre novos registros.</p>
+          <button class="btn btn-success btn-lg px-5 py-3" data-bs-toggle="modal" data-bs-target="#modalNovoRegistro">
+            <i class="bi bi-pencil"></i> Novo Registro
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SÓ A TABELA FICA DENTRO DO CONTAINER -->
+    <div class="container my-5">
+      
+      <!-- ALERTA INFORMATIVO NO TOPO -->
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <i class="bi bi-info-circle-fill fs-4 me-2"></i>
+        <div>
+          <strong>Atenção:</strong> 2 entregas estão pendentes e 1 está em análise. Atualize os registros antes do fim do expediente.
+        </div>
+      </div>
+
+      <!-- TABELA RESPONSIVA -->
+      <div class="card h-100 border border-3 border-warning">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title"><i class="bi bi-table text-danger"></i> Registros Recentes</h5>
+          <p class="card-text">Lista de entregas registradas no sistema.</p>
+
+          <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle mb-0">
+              <thead class="table-dark">
+                <tr>
+                  <th>#</th>
+                  <th>Cliente</th>
+                  <th>Destino</th>
+                  <th>Tipo de Serviço</th>
+                  <th>Valor</th>
+                  <th>Status</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>001</strong></td>
+                  <td>Maria Silva</td>
+                  <td>Campo Largo - Centro</td>
+                  <td>Entrega Expressa</td>
+                  <td>R$ 89,90</td>
+                  <td><span class="badge text-bg-success"><i class="bi bi-check-circle"></i> Finalizado</span></td>
+                  <td><button class="btn btn-outline-primary btn-sm"><i class="bi bi-eye"></i></button></td>
+                </tr>
+                <tr>
+                  <td><strong>002</strong></td>
+                  <td>João Pedrosa</td>
+                  <td>Curitiba - Batel</td>
+                  <td>Entrega Padrão</td>
+                  <td>R$ 45,00</td>
+                  <td><span class="badge text-bg-primary"><i class="bi bi-truck"></i> Em Rota</span></td>
+                  <td><button class="btn btn-outline-primary btn-sm"><i class="bi bi-eye"></i></button></td>
+                </tr>
+                <tr>
+                  <td><strong>003</strong></td>
+                  <td>Ana Costa</td>
+                  <td>Campo Largo - Bom Jesus</td>
+                  <td>Coleta Agendada</td>
+                  <td>R$ 120,00</td>
+                  <td><span class="badge text-bg-warning"><i class="bi bi-clock"></i> Pendente</span></td>
+                  <td><button class="btn btn-outline-primary btn-sm"><i class="bi bi-eye"></i></button></td>
+                </tr>
+                <tr>
+                  <td><strong>004</strong></td>
+                  <td>Carlos de Souza</td>
+                  <td>Balsa Nova - Centro</td>
+                  <td>Entrega Expressa</td>
+                  <td>R$ 210,50</td>
+                  <td><span class="badge text-bg-info"><i class="bi bi-search"></i> Em Análise</span></td>
+                  <td><button class="btn btn-outline-primary btn-sm"><i class="bi bi-eye"></i></button></td>
+                </tr>
+                <tr>
+                  <td><strong>005</strong></td>
+                  <td>Fernanda Azevedo</td>
+                  <td>Campo Largo - Vila Operária</td>
+                  <td>Entrega Padrão</td>
+                  <td>R$ 67,90</td>
+                  <td><span class="badge text-bg-success"><i class="bi bi-check-circle"></i> Finalizado</span></td>
+                  <td><button class="btn btn-outline-primary btn-sm"><i class="bi bi-eye"></i></button></td>
+                </tr>
+                <tr>
+                  <td><strong>006</strong></td>
+                  <td>Rafael Mende</td>
+                  <td>Curitiba - Centro</td>
+                  <td>Coleta Agendada</td>
+                  <td>R$ 99,00</td>
+                  <td><span class="badge text-bg-warning"><i class="bi bi-clock"></i> Pendente</span></td>
+                  <td><button class="btn btn-outline-primary btn-sm"><i class="bi bi-eye"></i></button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-auto pt-3">
+            <div class="d-grid gap-2">
+              <button class="btn btn-success btn-lg px-5 py-3" data-bs-toggle="modal" data-bs-target="#modalNovoRegistro">
+                <i class="bi bi-pencil "></i> Cadastrar Novo Registro
+              </button>
             </div>
-    
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- MODAL COM FORMULÁRIO -->
+  <div class="modal fade" id="modalNovoRegistro" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title" id="tituloModal"><i class="bi bi-plus-circle"></i> Cadastrar Novo Registro</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row g-3">
+
+              <!-- DADOS DO CLIENTE LADO A LADO -->
+              <div class="col-12 col-md-6">
+                <label class="form-label">Nome do Cliente *</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-person"></i></span>
+                  <input type="text" class="form-control" placeholder="Nome completo" required>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label class="form-label">Email *</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                  <input type="email" class="form-control" placeholder="seu@email.com" required>
+                </div>
+              </div>
+
+              <!-- TELEFONE / WHATSAPP COM INPUT-GROUP -->
+              <div class="col-12 col-md-6">
+                <label class="form-label">Telefone / WhatsApp *</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-whatsapp"></i></span>
+                  <span class="input-group-text">+55</span>
+                  <input type="tel" class="form-control" placeholder="(42) 99999-9999" required>
+                </div>
+              </div>
+
+              <!-- VALOR ESTIMADO COM INPUT-GROUP -->
+              <div class="col-12 col-md-6">
+                <label class="form-label">Valor Estimado</label>
+                <div class="input-group">
+                  <span class="input-group-text">R$</span>
+                  <input type="number" class="form-control" placeholder="0,00">
+                </div>
+              </div>
+
+              <!-- TIPO DE SERVIÇO COM FORM-SELECT -->
+              <div class="col-12">
+                <label class="form-label">Tipo de Serviço *</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-gear"></i></span>
+                  <select class="form-select" required>
+                    <option value="" selected disabled>Selecione o tipo de serviço...</option>
+                    <option value="expressa">Entrega Expressa</option>
+                    <option value="padrao">Entrega Padrão</option>
+                    <option value="coleta">Coleta Agendada</option>
+                    <option value="devolucao">Devolução</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- DESTINO -->
+              <div class="col-12">
+                <label class="form-label">Destino *</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+                  <input type="text" class="form-control" placeholder="Cidade - Bairro" required>
+                </div>
+              </div>
+
+              <!-- OBSERVAÇÕES COM TEXTAREA -->
+              <div class="col-12">
+                <label class="form-label">Observações</label>
+                <textarea class="form-control" rows="4" placeholder="Descreva detalhes da entrega, prazo, etc..."></textarea>
+              </div>
+
+              <!-- CONFIRMAÇÃO DE CIÊNCIA -->
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ciencia" required>
+                  <label class="form-check-label" for="ciencia">
+                    Estou ciente de que os dados informados serão usados para controle operacional e confirmo o envio deste registro. *
+                  </label>
+                </div>
+              </div>
+
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success btn-lg px-5">Salvar Registro</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+
          </div>
 
   </main>
